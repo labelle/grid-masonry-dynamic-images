@@ -34,7 +34,7 @@ $.ajax({
     url : folder,
     success: function (data) {
         $(data).find("a").attr("href", function (i, val) {
-            if( val.match(/\.(jpe?g|JP?G|png|PNG|gif|GIF|svg|SVG)$/) ) { 
+            if( val.match(/\.(jpe?g|JPE?G|png|PNG|gif|GIF|svg|SVG)$/) ) { 
 
               var img='<figure class="masonry-item masonry-tooltip">';
     img+='<span class="masonry-tooltiptext">'+decodeURIComponent(val)+'</span>';
