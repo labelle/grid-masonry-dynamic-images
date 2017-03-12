@@ -4,6 +4,9 @@
   <head>
     <title></title>
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <!--         <link rel="stylesheet" href="../../css/bootstrap-grid.css"> -->
+<!--         <link rel="stylesheet" href="../../css/evo-reset.css"> -->
+        <link rel="stylesheet" href="../../css/evo-elements.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
     <script src="js/jquery.js"></script>
   </head>
@@ -18,7 +21,7 @@
         <section id="evoMasonry">
             <h2 class="evo-text evo-text-6">Pure CSS Masonry Grid</h2>
             <div class="evo-space"></div>
-                <div class="masonry">
+                <div class="evo-masonry">
                 </div><!-- masonry -->
         </section>
     </main>
@@ -31,14 +34,14 @@ $.ajax({
     url : folder,
     success: function (data) {
         $(data).find("a").attr("href", function (i, val) {
-            if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+            if( val.match(/\.(jpe?g|JP?G|png|PNG|gif|GIF|svg|SVG)$/) ) { 
 
-              var img='<figure class="item tooltip">';
-    img+=' <span class="tooltiptext">'+decodeURIComponent(val)+'</span>';
-    img+='<a href='+folder+val+'><img  class="image-bg image-square image-bg-random" src="'+folder+val+'"></a>';
+              var img='<figure class="masonry-item masonry-tooltip">';
+    img+='<span class="masonry-tooltiptext">'+decodeURIComponent(val)+'</span>';
+    img+='<a href='+folder+val+'><img  class="image" src="'+folder+val+'"></a>';
     img+='<div class="evo-space-5"></div>';
     img+='</figure>';
-                $(".masonry").append( img);
+                $(".evo-masonry").append( img);
             } 
         });
     }
