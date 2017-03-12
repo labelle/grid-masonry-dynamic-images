@@ -1,9 +1,9 @@
 
 $evo:                           ".evo" !default;
 
-#{$evo}-text-smaller   { font-size: .75rem; } // 12px
+#{$evo}-text-smaller   { font-size: .5em; } // 12px
 
-.masonry {
+.evo-masonry {
     column-count: 4;
     margin: 1.5em 0;
     padding: 0;
@@ -12,7 +12,7 @@ $evo:                           ".evo" !default;
     column-gap: 1.5em;
 }
 
-.item {
+.masonry-item {
     background: #fff;
     margin: 0 0 1.5em;
     display: inline-block;
@@ -20,14 +20,14 @@ $evo:                           ".evo" !default;
     width: 100%;
 }
 
-.item > figcaption {
+.masonry-item > figcaption {
      @extend #{$evo}-text-smaller;
      column-break-inside: avoid;
      display: inline-block;
 }
 
 @media only screen and (min-width:300px) {
-    .masonry {
+    .evo-masonry {
         -moz-column-count: 2;
         -webkit-column-count: 2;
         column-count: 2;
@@ -35,7 +35,7 @@ $evo:                           ".evo" !default;
 }
 
 @media only screen and (min-width:700px) {
-    .masonry {
+    .evo-masonry {
         -moz-column-count: 3;
         -webkit-column-count: 3;
         column-count: 3;
@@ -43,7 +43,7 @@ $evo:                           ".evo" !default;
 }
 
 @media only screen and (min-width:900px) {
-    .masonry {
+    .evo-masonry {
         -moz-column-count: 4;
         -webkit-column-count: 4;
         column-count: 4;
@@ -51,7 +51,7 @@ $evo:                           ".evo" !default;
 }
 
 @media only screen and (min-width:1100px) {
-    .masonry {
+    .evo-masonry {
         -moz-column-count: 4;
         -webkit-column-count: 4;
         column-count: 4;
@@ -59,33 +59,33 @@ $evo:                           ".evo" !default;
 }
 
 @media only screen and (min-width:1300px) {
-    .masonry {
+    .evo-masonry {
         -moz-column-count: 4;
         -webkit-column-count: 4;
         column-count: 4;
     }
 }
 /* make img reponsive  */
-img{
+.evo-masonry img{
   width: 100%;
 }
 
 /* Tooltip container */
-.tooltip {
+.masonry-tooltip {
     position: relative;
     display: inline-block;
     
 }
 
 /* Tooltip text */
-.tooltip .tooltiptext {
+.masonry-tooltip .masonry-tooltiptext {
     visibility: hidden;
-    width: 120px;
+    width: auto;
     background-color: black;
     color: #fff;
     text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
+    padding: 1em 1em;
+    border-radius: 0;
  
     /* Position the tooltip text - see examples below! */
     position: absolute;
@@ -93,6 +93,6 @@ img{
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
+.masonry-tooltip:hover .masonry-tooltiptext {
     visibility: visible;
 }
